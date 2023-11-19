@@ -10,6 +10,7 @@
   gdk-pixbuf,
   glib,
   gcc,
+  wrapGAppsHook,
 }:
 stdenv.mkDerivation {
   pname = "keymapp";
@@ -22,6 +23,7 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     autoPatchelfHook
+    wrapGAppsHook
   ];
 
   buildInputs = [

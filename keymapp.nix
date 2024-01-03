@@ -12,13 +12,15 @@
   gcc,
   wrapGAppsHook,
 }:
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "keymapp";
-  version = "latest";
+  version = "1.0.7";
 
   src = fetchurl {
     url = "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz";
-    hash = "sha256-e9Ty3gMb+nkXGK8sND4ljyrIxP+1fLasiV6DoTiWmsU=";
+    hash = "sha256-BmCLF/4wjBDxToMW0OYqI6PZwqmctgBs7nBygmJ+YOU=";
+    inherit pname;
+    inherit version;
   };
 
   nativeBuildInputs = [

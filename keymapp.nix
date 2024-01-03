@@ -19,7 +19,6 @@ stdenv.mkDerivation rec {
   src = fetchurl {
     url = "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.tar.gz";
     hash = "sha256-BmCLF/4wjBDxToMW0OYqI6PZwqmctgBs7nBygmJ+YOU=";
-    inherit pname;
     inherit version;
   };
 
